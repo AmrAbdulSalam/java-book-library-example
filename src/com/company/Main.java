@@ -145,7 +145,7 @@ public class Main {
                     break;
 
                 case "quit" :
-                    System.out.println("Thank  for using our program ");
+                    System.out.println("Thank you for using our program ");
                     System.exit(0);
                     break;
 
