@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
@@ -30,8 +31,8 @@ public class Main {
                         System.out.println("Invalid inputs");
                     else {
 
-                        //book.setISBN(tokens[1]);
                         book.setISBN(tokens[1]);
+                        Collections.sort(book.arrISBN);
                         //System.out.println(tokens.length);
                         System.out.println("You have added a new book congratulations :)");
                         book.counter++;
@@ -76,7 +77,10 @@ public class Main {
                     break;
 
                 case "delete":
-                    System.out.println("Its delete command");
+                    //System.out.println("Its delete command");
+                    index = book.arrISBN.indexOf(tokens[1]);
+                    book.counter -- ;
+                    book.removeArr(index);
                     break;
 
                 case "get":

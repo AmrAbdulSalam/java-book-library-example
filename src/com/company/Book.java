@@ -36,6 +36,15 @@ public class Book {
         countSet = 0;
     }
 
+    public void removeArr(int i){
+        arrISBN.remove(i);
+        arrBorrowed.remove(i);
+        arrPuplish.remove(i);
+        arrEdition.remove(i);
+        arrAuthor.remove(i);
+        arrTitle.remove(i);
+    }
+
     // Set method for all primitve types :
     public void setISBN(String ISBN ){
 
@@ -88,4 +97,6 @@ public class Book {
     public int getCountSet(){
         return countSet;
     }
+
+
 }
