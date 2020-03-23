@@ -12,6 +12,7 @@ public class Book {
     private int puplishedYear ;
     private boolean Borrowed;
     public int counter = 0 ;
+    private int countSet = 0;
     //public int index;
 
 
@@ -28,6 +29,12 @@ public class Book {
         return arrISBN.size();
     }
 
+    public void setCountSet(){
+        countSet ++;
+    }
+    public void setZero(){
+        countSet = 0;
+    }
 
     // Set method for all primitve types :
     public void setISBN(String ISBN ){
@@ -76,5 +83,9 @@ public class Book {
 
     public boolean getBorrowed(int i){
         return arrBorrowed.get(i);
+    }
+
+    public int getCountSet(){
+        return countSet;
     }
 }

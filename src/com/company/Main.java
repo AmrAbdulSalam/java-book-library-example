@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String [] s = new String[5];//Dose not do anything
+        //String [] s = new String[5];//Dose not do anything
 
         Scanner input = new Scanner(System.in);
-        int num1 , index , num2;
+        int num1 , index ;
         String output = "";
         System.out.println("Welcome to my program please start using the given COMANDS : ");
         Book book = new Book();
@@ -37,6 +37,10 @@ public class Main {
                         book.counter++;
                         index = book.arrISBN.indexOf(tokens[1]);
                         book.setBorrowed(false , index);
+                        book.setEdition(0 , index);
+                        book.setAuthor("" , 0);
+                        book.setPuplishedYear(0 , index);
+                        book.setTitle("" , index);
                     }
 
                     break;
@@ -131,16 +135,16 @@ public class Main {
                 case "print":
                     //System.out.println("Its print command");
 
-                    output = "ISBN\t\t" +"Title\t\t\t\t\t" + "Edition\t\t\t\t" + "Author\t\t\t" + "Year\t\t\t" + "Available";
-                    System.out.println(output);
-
-                    for(int i = 0 ; i < book.counter ; i++){
-                        output = book.getISBN(i) + "\t\t\t" + book.getTitle(i) +"\t\t\t" +
-                                book.getEdition(i) +"th"+"\t\t\t" + book.getAuthor(i) + "\t  " + book.getPuplishedYear(i)
-                        +"\t\t\t" +(book.getBorrowed(i) ? "Not Available" : "Available");
-
+                        output = "ISBN\t\t" + "Title\t\t\t\t\t" + "Edition\t\t\t\t" + "Author\t\t\t" + "Year\t\t\t" + "Available";
                         System.out.println(output);
-                    }
+
+                        for (int i = 0; i < book.counter; i++) {
+                            output = book.getISBN(i) + "\t\t\t" + book.getTitle(i) + "\t\t\t" +
+                                    book.getEdition(i) + "th" + "\t\t\t" + book.getAuthor(i) + "\t  " + book.getPuplishedYear(i)
+                                    + "\t\t\t" + (book.getBorrowed(i) ? "Not Available" : "Available");
+
+                            System.out.println(output);
+                        }
 
                     break;
 
