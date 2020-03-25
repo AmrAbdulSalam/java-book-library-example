@@ -167,17 +167,17 @@ public class Main {
                 case "print":
                     //System.out.println("Its print command");
 
-                        output = "ISBN\t\t" + "Title\t\t\t\t\t" + "Edition\t\t\t\t" + "Author\t\t\t" + "Year\t\t\t" + "Available";
+                        output = "\t\tISBN\t\t\t\t" + "Title\t\t\t\t\t  " + "Edition\t\t\t\t" + "Author\t\t\t" + "Year\t\t\t" + "Available";
                         System.out.println(output);
 
                         for (int i = 0; i < book.counter; i++) {
-                            output = book.getISBN(i) + "\t\t\t" + book.getTitle(i) + "\t\t\t" +
-                                    book.getEdition(i) + "th" + "\t\t\t" + book.getAuthor(i) + "\t  " + book.getPuplishedYear(i)
+                            output = "\t\t"+book.getISBN(i) + "\t\t\t" + book.getTitle(i) + "\t\t\t" +
+                                    book.getEdition(i) + "th" + "\t\t\t\t\t" + book.getAuthor(i) + "\t\t\t" + book.getPuplishedYear(i)
                                     + "\t\t\t" + (book.getBorrowed(i) ? "Not Available" : "Available");
 
                             System.out.println(output);
                         }
-
+                        output = " ";
                     break;
 
                 case "quit" :

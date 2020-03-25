@@ -27,7 +27,6 @@ public class Book {
     public boolean getT(String n){
         return arrTitle.contains(n);
     }
-
     public int sizeR(){
         return arrISBN.size();
     }
