@@ -18,12 +18,15 @@ public class Book {
 
     //There should be an arrayList for each data type with a counter
     public ArrayList<String> arrISBN = new ArrayList<String>();
-    private ArrayList<String> arrTitle = new ArrayList<String>();
-    private ArrayList<String> arrAuthor = new ArrayList<String>();
+    public ArrayList<String> arrTitle = new ArrayList<String>();
+    public ArrayList<String> arrAuthor = new ArrayList<String>();
     private ArrayList<Integer> arrEdition = new ArrayList<Integer>();
     private ArrayList<Integer> arrPuplish = new ArrayList<Integer>();
     private ArrayList<Boolean> arrBorrowed = new ArrayList<Boolean>();
 
+    public boolean getT(String n){
+        return arrTitle.contains(n);
+    }
 
     public int sizeR(){
         return arrISBN.size();

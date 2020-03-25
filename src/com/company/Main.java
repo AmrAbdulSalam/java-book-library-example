@@ -133,7 +133,35 @@ public class Main {
                     break;
 
                 case "search":
-                    System.out.println("Its search command");
+                    //System.out.println("Its search command");
+                    tokens[2] = tokens[2].toLowerCase();
+                    switch (tokens[1]){
+
+                        case "title":
+                            int b = 0;
+                            for(String s : book.arrTitle){
+                                if(s.toLowerCase().contains(tokens[2])){
+                                    System.out.println(s);
+                                    b++;
+                                }
+                            }
+                            if(b == 0 ){
+                                System.out.println("No matches found :(");
+                            }
+                            break;
+
+                        case "author" :
+                            int c = 0;
+                            for(String s : book.arrAuthor){
+                                if(s.toLowerCase().contains(tokens[2])){
+                                    System.out.println(s);
+                                    c++;
+                                }
+                            }
+                            if(c == 0)
+                                System.out.println("No matches found :(");
+                            break;
+                    }
                     break;
 
                 case "print":
